@@ -1,0 +1,487 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mohd Ahmed Ali — Portfolio | SDE & Full Stack Developer</title>
+  <meta name="description" content="Portfolio of Mohd Ahmed Ali - Computer Science Engineering Student @ GNDEC (VTU). SDE, Full Stack, AI Dev, DSA, and Cybersecurity.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Montserrat:wght@700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js" defer></script>
+</head>
+<body>
+
+  <div class="scroll-progress" id="scrollProgress" aria-hidden="true"></div>
+
+  <header>
+    <nav class="navbar">
+      <a href="#top" class="logo">MOHD AHMED ALI</a>
+      <div class="hamburger" id="hamburger" aria-label="Toggle navigation">
+        <span></span><span></span><span></span>
+      </div>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#about">About me</a></li>
+        <li><a href="#education">Education</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#portfolio">Portfolio</a></li>
+        <li><a href="#certifications">Certifications</a></li>
+        <li><a href="#achievements">Achievements</a></li>
+        <li><a class="btn" href="#contact">Contact Me</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <!-- Hero -->
+    <section class="hero" id="top">
+      <div class="bg-3d" aria-hidden="true">
+        <canvas id="bg-canvas"></canvas>
+        <div class="bg-3d-fallback"></div>
+      </div>
+      <div class="hero-top container">
+        <div class="content">
+          <div class="info">
+            <h1 class="hero-line">Hi, I am</h1>
+            <h2 class="hero-line"><span class="hl-1">Mohd</span><br><span class="hl-2">Ahmed Ali</span></h2>
+            <h6 class="hero-line">3rd Yr CSE @ GNDEC (VTU) | DSA | AI Dev | Full Stack | Aspiring SDE</h6>
+          </div>
+          <div class="contact-me hero-line">
+            <a href="https://github.com/AhmedAli-06" target="_blank" rel="noopener" title="GitHub"><img src="assets/github.svg" alt="GitHub"></a>
+            <a href="https://linkedin.com/in/mohd-ahmed-ali-a6110b32b" target="_blank" rel="noopener" title="LinkedIn"><img src="assets/linkedin.svg" alt="LinkedIn"></a>
+            <a href="mailto:mdahmeda490@gmail.com" title="Email"><img src="assets/gmail.svg" alt="Email"></a>
+          </div>
+        </div>
+        <div class="person-img" id="personPhoto">
+          <img src="photo.jpg" alt="Mohd Ahmed Ali" id="personImg">
+        </div>
+      </div>
+    </section>
+
+    <!-- Featured dark block -->
+    <section class="featured" data-reveal>
+      <div class="container featured-content">
+        <span class="featured-badge" data-reveal>FEATURED PROJECT • SIH 2026</span>
+        <h3 data-reveal>SadakSetu — AI Road Monitoring</h3>
+        <p data-reveal>
+          Crowdsourced, AI-powered system to identify, report, and prioritize municipal road and pothole repairs,
+          with integrated maps and navigation. Built for Smart India Hackathon 2026 with Team ExNebula on FastAPI and React PWA.
+        </p>
+        <a class="read-more" href="#portfolio" onclick="openProjectModal('sadaksetu')" data-reveal>EXPLORE CASE STUDY →</a>
+      </div>
+    </section>
+
+    <!-- About Me -->
+    <section class="aboutme container" id="about">
+      <div class="header-info" data-reveal>
+        <h4>ABOUT ME</h4>
+        <p class="bio-text">
+          "Hi, I'm Mohd Ahmed Ali — a Computer Science Engineering student at GNDEC Bidar, drawn to agentic AI and generative AI development. I work with Java, the MERN stack, and core CS fundamentals — DSA, algorithms, and databases — because I'd rather understand the 'why' than just use the tools. Currently preparing for roles in AI Development, SDE, and Full Stack — open to internships where I can learn, contribute, and grow."
+        </p>
+        <h6>EXPLORE</h6>
+        <div class="separator"><span></span><i></i><span></span></div>
+      </div>
+
+      <div class="objective-card" data-reveal>
+        <h5>CAREER OBJECTIVE</h5>
+        <p>
+          Computer Science Engineering student with hands-on experience building full-stack and AI-integrated applications for national-level hackathons and technical exhibitions. Strong interest in artificial intelligence and cybersecurity, with a growing focus on secure and scalable system design. Seeking an SDE or Full Stack Developer role.
+        </p>
+      </div>
+
+      <div class="grid-about stagger">
+        <div class="columns stagger-item" data-reveal>
+          <h6>DEVELOPMENT & CORE CS</h6>
+          <p>
+            Full-stack software engineering in Java, Python, and the MERN stack — covering C, Data Structures & Algorithms, DBMS, Object-Oriented Programming, and clean architecture. Building reliable software from system design down to database schemas.
+          </p>
+        </div>
+        <div class="columns stagger-item" data-reveal>
+          <h6>AI & CYBERSECURITY</h6>
+          <p>
+            Specialized in Agentic AI systems and Generative AI application development. Growing focus on intent-aware access control, 5D trust scoring engines, real-time event monitoring, and secure physical asset protection.
+          </p>
+        </div>
+      </div>
+
+      <div class="quote-block" data-reveal>
+        <blockquote>
+          "Code is like humor. When you have to explain it, it's bad."
+        </blockquote>
+        <cite>— Cory House</cite>
+      </div>
+
+      <div class="separator wide" data-reveal><span></span><i></i><span></span></div>
+    </section>
+
+    <!-- Education -->
+    <section class="education container" id="education">
+      <div class="header-info" data-reveal>
+        <h4>EDUCATION</h4>
+        <p>Academic foundation in Computer Science & Engineering at Visvesvaraya Technological University (VTU).</p>
+        <h6>ACADEMICS</h6>
+        <div class="separator"><span></span><i></i><span></span></div>
+      </div>
+
+      <div class="education-grid stagger">
+        <div class="edu-card main-edu stagger-item" data-reveal>
+          <div class="edu-header">
+            <h5>Guru Nanak Dev Engineering College (GNDEC)</h5>
+            <span class="edu-year">2022 – 2028 (Expected)</span>
+          </div>
+          <p class="edu-degree">Bachelor of Engineering (B.E.) — Computer Science & Engineering</p>
+          <p class="edu-sub">Visvesvaraya Technological University (VTU) • 2022 Scheme | Bidar, Karnataka</p>
+          <div class="edu-badge">CGPA: 8.27 / 10.0</div>
+        </div>
+
+        <div class="edu-card stagger-item" data-reveal>
+          <div class="edu-header">
+            <h5>Pre-University Course (12th Standard)</h5>
+            <span class="edu-score">84.5%</span>
+          </div>
+          <p class="edu-sub">Higher Secondary Science & Mathematics Stream</p>
+        </div>
+
+        <div class="edu-card stagger-item" data-reveal>
+          <div class="edu-header">
+            <h5>Secondary School Certificate (10th Standard)</h5>
+            <span class="edu-score">81.92%</span>
+          </div>
+          <p class="edu-sub">Secondary School Education</p>
+        </div>
+      </div>
+
+      <div class="separator wide" data-reveal><span></span><i></i><span></span></div>
+    </section>
+
+    <!-- Skills -->
+    <section class="skills container" id="skills">
+      <div class="header-info" data-reveal>
+        <h4>SKILLS</h4>
+        <p>Core competencies, programming languages, frameworks, and technical toolset.</p>
+        <h6>STACK</h6>
+        <div class="separator"><span></span><i></i><span></span></div>
+      </div>
+
+      <div class="skill-group" data-reveal>
+        <h5>USING NOW</h5>
+        <div class="grid-skills stagger">
+          <div class="grid-item stagger-item"><img src="assets/skills/c.svg" alt="C"><h6>C Language</h6></div>
+          <div class="grid-item stagger-item"><img src="assets/skills/python.svg" alt="Python"><h6>Python</h6></div>
+          <div class="grid-item stagger-item"><img src="assets/skills/java.svg" alt="Java"><h6>Java</h6></div>
+          <div class="grid-item stagger-item"><img src="assets/skills/sql.svg" alt="SQL"><h6>SQL</h6></div>
+          <div class="grid-item stagger-item"><img src="assets/skills/react.svg" alt="React"><h6>React</h6></div>
+          <div class="grid-item stagger-item"><img src="assets/skills/git.svg" alt="Git"><h6>Git / GitHub</h6></div>
+          <div class="grid-item stagger-item"><img src="assets/skills/fastapi.svg" alt="FastAPI"><h6>FastAPI</h6></div>
+          <div class="grid-item stagger-item"><img src="assets/skills/mysql.svg" alt="MySQL"><h6>MySQL</h6></div>
+          <div class="grid-item stagger-item"><img src="assets/skills/supabase.svg" alt="Supabase"><h6>Supabase</h6></div>
+        </div>
+      </div>
+
+      <div class="skill-group" data-reveal>
+        <h5>LEARNING NOW</h5>
+        <div class="grid-skills stagger">
+          <div class="grid-item stagger-item"><img src="assets/skills/agentic.svg" alt="Agentic AI"><h6>Agentic AI</h6></div>
+          <div class="grid-item stagger-item"><img src="assets/skills/genai.svg" alt="Generative AI"><h6>Generative AI</h6></div>
+          <div class="grid-item stagger-item"><img src="assets/skills/typescript.svg" alt="TypeScript"><h6>TypeScript</h6></div>
+          <div class="grid-item stagger-item"><img src="assets/skills/nodedotjs.svg" alt="Node.js"><h6>Node.js</h6></div>
+          <div class="grid-item stagger-item"><img src="assets/skills/mongodb.svg" alt="MongoDB"><h6>MongoDB</h6></div>
+          <div class="grid-item stagger-item"><img src="assets/skills/express.svg" alt="Express"><h6>Express.js</h6></div>
+        </div>
+      </div>
+
+      <div class="skill-group" data-reveal>
+        <h5>CORE CS & PLATFORMS</h5>
+        <div class="grid-skills stagger">
+          <div class="grid-item stagger-item"><img src="assets/skills/dsa.svg" alt="Data Structures"><h6>Data Structures</h6></div>
+          <div class="grid-item stagger-item"><img src="assets/skills/dbms.svg" alt="DBMS"><h6>DBMS</h6></div>
+          <div class="grid-item stagger-item"><img src="assets/skills/coa.svg" alt="Computer Organization"><h6>Computer Org</h6></div>
+          <div class="grid-item stagger-item"><img src="assets/skills/arm.svg" alt="ARM Microcontroller"><h6>ARM Microcontroller</h6></div>
+          <div class="grid-item stagger-item"><img src="assets/skills/oop.svg" alt="OOP"><h6>OOP</h6></div>
+          <div class="grid-item stagger-item"><img src="assets/skills/vercel.svg" alt="Vercel"><h6>Vercel</h6></div>
+          <div class="grid-item stagger-item"><img src="assets/skills/keil.svg" alt="Keil µVision"><h6>Keil µVision</h6></div>
+          <div class="grid-item stagger-item"><img src="assets/skills/antigravity.svg" alt="Antigravity"><h6>Antigravity</h6></div>
+          <div class="grid-item stagger-item"><img src="assets/skills/canva.svg" alt="Canva"><h6>Canva / PPT</h6></div>
+        </div>
+      </div>
+
+      <div class="separator wide" data-reveal><span></span><i></i><span></span></div>
+    </section>
+
+    <!-- Portfolio -->
+    <section class="portfolio" id="portfolio">
+      <div class="header-banner">
+        <p>PORTFOLIO &amp; PROJECTS</p>
+      </div>
+
+      <div class="grid-header">
+        <div class="info" id="portfolioFilters">
+          <p class="filter-btn active" data-filter="all">ALL</p>
+          <p class="filter-btn" data-filter="hackathon">HACKATHONS</p>
+          <p class="filter-btn" data-filter="individual">INDIVIDUAL</p>
+          <p class="filter-btn" data-filter="ai-sec">AI &amp; SECURITY</p>
+        </div>
+      </div>
+
+      <div class="grid-port container-wide">
+        <!-- Project 1: SadakSetu -->
+        <div class="grid-col tile-1 port-card" data-category="hackathon ai-sec" onclick="openProjectModal('sadaksetu')">
+          <div class="card-media">
+            <img src="assets/projects/sadaksetu/04-map-home.png" alt="SadakSetu — map home screen" loading="lazy">
+            <span class="card-shot">MAPS • HEATMAPS • AI COPILOT</span>
+          </div>
+          <div class="card-content">
+            <span class="card-tag">Smart India Hackathon 2026 • Team ExNebula</span>
+            <h4>SadakSetu</h4>
+            <p>AI-Powered Road Health Monitoring Platform with crowdsourced reporting, repair prioritization &amp; navigation.</p>
+            <div class="card-tech">
+              <span>FastAPI</span><span>React PWA</span><span>Python</span><span>Maps API</span>
+            </div>
+            <span class="tile-label">VIEW CASE STUDY →</span>
+          </div>
+        </div>
+
+        <!-- Project 2: MedRover AI -->
+        <div class="grid-col tile-2 port-card" data-category="hackathon ai-sec" onclick="openProjectModal('medrover')">
+          <div class="card-media">
+            <img src="assets/projects/medrover/01-welcome.png" alt="MedRover AI — welcome screen" loading="lazy">
+            <span class="card-shot">WELCOME • DASHBOARDS • AI CHAT</span>
+          </div>
+          <div class="card-content">
+            <span class="card-tag">TechnoVision-26 (Apr 2026) • Team ExNebula</span>
+            <h4>MedRover AI</h4>
+            <p>Rural Healthcare Access Platform built with React Native Expo, Node.js, Express, Groq SDK, OpenAI &amp; JWT.</p>
+            <div class="card-tech">
+              <span>React Native</span><span>Node.js</span><span>Groq AI</span><span>OpenAI</span>
+            </div>
+            <span class="tile-label">VIEW CASE STUDY →</span>
+          </div>
+        </div>
+
+        <!-- Project 3: ContextShield -->
+        <div class="grid-col tile-3 port-card" data-category="individual ai-sec" onclick="openProjectModal('contextshield')">
+          <div class="card-media">
+            <img src="assets/projects/contextshield/02-dashboard.png" alt="ContextShield — live dashboard" loading="lazy">
+            <span class="card-shot">TRUST SCORES • LIVE MONITORING</span>
+          </div>
+          <div class="card-content">
+            <span class="card-tag">Individual Project • v0.2.0-alpha</span>
+            <h4>ContextShield</h4>
+            <p>Intent-Aware Physical Asset Security Platform using a 5-dimensional Trust Score Engine &amp; WebSocket monitoring.</p>
+            <div class="card-tech">
+              <span>FastAPI</span><span>PostgreSQL</span><span>Redis</span><span>React TS</span>
+            </div>
+            <span class="tile-label">VIEW CASE STUDY →</span>
+          </div>
+        </div>
+
+        <!-- Project 4: Nexora -->
+        <div class="grid-col tile-4 port-card" data-category="individual" onclick="openProjectModal('nexora')">
+          <div class="card-media">
+            <img src="assets/projects/campusnest/feed.png" alt="Nexora — community feed" loading="lazy">
+            <span class="card-shot">FEED • PROFILES • LOGIN</span>
+          </div>
+          <div class="card-content">
+            <span class="card-tag">Individual Project</span>
+            <h4>Nexora (CampusNest)</h4>
+            <p>College Community Platform architecture &amp; roadmap for student engagement and resource sharing.</p>
+            <div class="card-tech">
+              <span>Flask</span><span>React</span><span>Tailwind</span><span>Supabase</span>
+            </div>
+            <span class="tile-label">VIEW CASE STUDY →</span>
+          </div>
+        </div>
+
+        <!-- Project 5: Timetable Generator -->
+        <div class="grid-col tile-5 port-card" data-category="individual" onclick="openProjectModal('timetable')">
+          <div class="card-media">
+            <img src="assets/projects/timetable/hero.png" alt="Timetable Generator — hero screen" loading="lazy">
+            <span class="card-shot">CONSTRAINT SOLVER • JAVA</span>
+          </div>
+          <div class="card-content">
+            <span class="card-tag">Coursework Mini-Project • BCS401</span>
+            <h4>Intelligent Timetable Gen</h4>
+            <p>Algorithmic scheduling engine for automated college timetable constraint solving.</p>
+            <div class="card-tech">
+              <span>Java</span><span>DSA</span><span>Algorithms</span>
+            </div>
+            <span class="tile-label">VIEW CASE STUDY →</span>
+          </div>
+        </div>
+
+        <!-- Placeholder tile -->
+        <div class="grid-col tile-6 port-card">
+          <div class="card-content center-content">
+            <h4>More Innovations Coming Soon</h4>
+            <p>Currently researching multi-agent autonomous security frameworks.</p>
+            <span class="tile-label">STAY TUNED</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="grid-footer" data-reveal>
+        <p>EXPLORE DETAILED CODE REPOSITORIES ON GITHUB (@AhmedAli-06)</p>
+      </div>
+    </section>
+
+    <!-- Certifications -->
+    <section class="certifications container" id="certifications">
+      <div class="header-info" data-reveal>
+        <h4>CERTIFICATIONS</h4>
+        <p>Verified professional certifications and technical bootcamps.</p>
+        <h6>CREDENTIALS</h6>
+        <div class="separator"><span></span><i></i><span></span></div>
+      </div>
+
+      <div class="cert-grid stagger">
+        <div class="cert-card stagger-item" data-reveal>
+          <div class="cert-icon">📜</div>
+          <div class="cert-details">
+            <h5>Advanced Data Structures &amp; Algorithms in Java</h5>
+            <p class="cert-sub">Sorting &amp; Searching Algorithms</p>
+            <span class="cert-meta">Infosys Springboard • April 2026</span>
+          </div>
+        </div>
+
+        <div class="cert-card stagger-item" data-reveal>
+          <div class="cert-icon">🗄️</div>
+          <div class="cert-details">
+            <h5>Basic Relational Database Design</h5>
+            <p class="cert-sub">Relational Schema &amp; Normalization</p>
+            <span class="cert-meta">Infosys Springboard • March 2026</span>
+          </div>
+        </div>
+
+        <div class="cert-card stagger-item" data-reveal>
+          <div class="cert-icon">🚀</div>
+          <div class="cert-details">
+            <h5>Syntax to Success Bootcamp</h5>
+            <p class="cert-sub">Full Stack &amp; Career Acceleration Program</p>
+            <span class="cert-meta">ABC Technology Training &amp; GNDEC Bidar • May 2026</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="separator wide" data-reveal><span></span><i></i><span></span></div>
+    </section>
+
+    <!-- Achievements & Participation -->
+    <section class="achievements container" id="achievements">
+      <div class="header-info" data-reveal>
+        <h4>ACHIEVEMENTS &amp; HACKATHONS</h4>
+        <p>National hackathons, exhibitions, and technical competitions.</p>
+        <h6>HONORS</h6>
+        <div class="separator"><span></span><i></i><span></span></div>
+      </div>
+
+      <div class="timeline">
+        <div class="timeline-item" data-reveal>
+          <div class="timeline-dot"></div>
+          <div class="timeline-content">
+            <span class="timeline-date">April 2026</span>
+            <h5>TECHNOVISION-26 Project Exhibition</h5>
+            <p>Presented <strong>"Urban Pulse + MedRover"</strong> project exhibition organized by ISTE Students' Chapter at GNDEC Bidar.</p>
+          </div>
+        </div>
+
+        <div class="timeline-item" data-reveal>
+          <div class="timeline-dot"></div>
+          <div class="timeline-content">
+            <span class="timeline-date">September 2025</span>
+            <h5>SIH 2025 &amp; HackUtsava-2025 Nomination</h5>
+            <p>Participant in Internal Hackathon with <strong>Team ExNebula</strong>, nominated for Smart India Hackathon 2025 and HackUtsava-2025 at GNDEC Bidar.</p>
+          </div>
+        </div>
+
+        <div class="timeline-item" data-reveal>
+          <div class="timeline-dot"></div>
+          <div class="timeline-content">
+            <span class="timeline-date">November 2025</span>
+            <h5>HACTOBER 2025 Mini Hackathon &amp; Security Quiz</h5>
+            <p>Participant in Annual Cyber Security Awareness Week Mini Hackathon and Quiz by Dept. of CSE-ICB, GNDEC Bidar.</p>
+          </div>
+        </div>
+
+        <div class="timeline-item" data-reveal>
+          <div class="timeline-dot"></div>
+          <div class="timeline-content">
+            <span class="timeline-date">Yukti 2026</span>
+            <h5>Yukti 2026 Quiz Event</h5>
+            <p>Attended the competitive technical Quiz event at Yukti 2026.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="separator wide" data-reveal><span></span><i></i><span></span></div>
+    </section>
+
+    <!-- Contact -->
+    <section class="contact container" id="contact">
+      <div class="header-info" data-reveal>
+        <h4>CONTACT</h4>
+        <p>
+          "Thanks for visiting — let's connect!" If you'd like to talk about an internship, SDE role, AI project, or tech collaboration, my inbox is open.
+        </p>
+        <h6>REACH OUT</h6>
+        <div class="separator"><span></span><i></i><span></span></div>
+      </div>
+
+      <div class="contact-wrapper">
+        <div class="contact-info-panel" data-reveal>
+          <h5>DIRECT CONTACT</h5>
+          <ul class="info-list">
+            <li><strong>Location:</strong> Bidar, Karnataka, India</li>
+            <li><strong>Email:</strong> <a href="mailto:mdahmeda490@gmail.com">mdahmeda490@gmail.com</a></li>
+            <li><strong>Phone:</strong> <a href="tel:+919108608764">+91 9108608764</a></li>
+            <li><strong>LinkedIn:</strong> <a href="https://linkedin.com/in/mohd-ahmed-ali-a6110b32b" target="_blank" rel="noopener">linkedin.com/in/mohd-ahmed-ali-a6110b32b</a></li>
+            <li><strong>GitHub:</strong> <a href="https://github.com/AhmedAli-06" target="_blank" rel="noopener">github.com/AhmedAli-06</a></li>
+          </ul>
+        </div>
+
+        <form id="contactForm" data-reveal>
+          <input type="text" name="name" placeholder="ENTER YOUR NAME*" required>
+          <input type="email" name="email" placeholder="ENTER YOUR EMAIL*" required>
+          <input type="tel" name="phone" placeholder="YOUR PHONE (+91...)">
+          <textarea name="message" id="message" placeholder="YOUR MESSAGE*" required></textarea>
+          <p class="form-status" id="formStatus"></p>
+          <button type="submit">SUBMIT MESSAGE</button>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <!-- Project Details Modal -->
+  <div class="modal-backdrop" id="projectModal">
+    <div class="modal-box">
+      <button class="modal-close" onclick="closeProjectModal()">&times;</button>
+      <div id="modalBody">
+        <!-- Dynamic Modal Content populated via script.js -->
+      </div>
+    </div>
+  </div>
+
+  <footer>
+    <div class="container footer-info" data-reveal>
+      <div class="scroll-up">
+        <a href="#top" title="Back to top"><span class="arrow-up">↑</span></a>
+        <h6>BACK TO TOP</h6>
+      </div>
+
+      <div class="footer-quote">
+        <p>"Code is like humor. When you have to explain it, it's bad." — Cory House</p>
+      </div>
+
+      <div class="social">
+        <a href="https://github.com/AhmedAli-06" target="_blank" rel="noopener" title="GitHub"><img src="assets/github.svg" alt="GitHub"></a>
+        <a href="https://linkedin.com/in/mohd-ahmed-ali-a6110b32b" target="_blank" rel="noopener" title="LinkedIn"><img src="assets/linkedin.svg" alt="LinkedIn"></a>
+        <a href="mailto:mdahmeda490@gmail.com" title="Email"><img src="assets/gmail.svg" alt="Email"></a>
+      </div>
+      <p>&copy; 2026 Mohd Ahmed Ali. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
+
