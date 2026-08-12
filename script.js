@@ -31,16 +31,7 @@ if (hamburger && navLinks) {
   });
 }
 
-// ===== Photo placeholder handling =====
-const personImg = document.getElementById('personImg');
-const personPhoto = document.getElementById('personPhoto');
 
-if (personImg && personPhoto) {
-  personImg.addEventListener('error', () => {
-    personImg.remove();
-    personPhoto.classList.add('placeholder');
-  });
-}
 
 // ===== Scroll reveal system (story-style entrances) =====
 const staggerEls = document.querySelectorAll('.stagger-item');
