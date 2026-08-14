@@ -269,19 +269,58 @@ document.addEventListener('keydown', (e) => {
 });
 
 // ===== Contact Form Handler =====
+const FORMSPREE_FORM_ID = 'mjybolyv';
 const contactForm = document.getElementById('contactForm');
 const formStatus = document.getElementById('formStatus');
 
+const setFormStatus = (message, isError) => {
+  if (!formStatus) return;
+  formStatus.style.color = isError ? '#cc0000' : '#006600';
+  formStatus.textContent = message;
+};
+
 if (contactForm) {
-  contactForm.addEventListener('submit', (e) => {
+  contactForm.addEventListener('submit', async (e) => {
     e.preventDefault();
     const formData = new FormData(contactForm);
     const name = formData.get('name');
-    if (formStatus) {
-      formStatus.style.color = '#006600';
-      formStatus.textContent = `Thank you, ${name}! Your message has been sent successfully. (Reach me directly at mdahmeda490@gmail.com / +91 9108608764)`;
+    const submitBtn = contactForm.querySelector('button[type="submit"]');
+
+    if (FORMSPREE_FORM_ID === 'YOUR_FORMSPREE_FORM_ID') {
+      setFormStatus('Contact form is not configured yet — email me directly at mdahmeda490@gmail.com.', true);
+      return;
     }
-    contactForm.reset();
+
+    formData.append('_subject', `New portfolio message from ${name}`);
+    formData.append('_replyto', formData.get('email'));
+
+    if (submitBtn) {
+      submitBtn.disabled = true;
+      submitBtn.textContent = 'SENDING...';
+    }
+    setFormStatus('Sending your message...', false);
+
+    try {
+      const response = await fetch(`https://formspree.io/f/${FORMSPREE_FORM_ID}`, {
+        method: 'POST',
+        body: formData,
+        headers: { 'Accept': 'application/json' },
+      });
+
+      if (response.ok) {
+        setFormStatus(`Thank you, ${name}! Your message has been sent successfully. I'll get back to you soon.`, false);
+        contactForm.reset();
+      } else {
+        setFormStatus('Something went wrong — please try again or email me directly at mdahmeda490@gmail.com.', true);
+      }
+    } catch (err) {
+      setFormStatus('Network error — please check your connection and try again, or email mdahmeda490@gmail.com.', true);
+    } finally {
+      if (submitBtn) {
+        submitBtn.disabled = false;
+        submitBtn.textContent = 'SUBMIT MESSAGE';
+      }
+    }
   });
 }
 
